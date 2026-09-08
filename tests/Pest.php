@@ -1,3 +1,5 @@
 <?php
 
-uses(Jeffersongoncalves\Woocommerce\Tests\TestCase::class)->in('Feature', 'Unit');
+use Jeffersongoncalves\Woocommerce\Tests\TestCase;
+
+uses(TestCase::class)->in('Feature', 'Unit');

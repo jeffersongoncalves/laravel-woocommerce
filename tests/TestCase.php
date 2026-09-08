@@ -13,4 +13,12 @@ class TestCase extends Orchestra
             WoocommerceServiceProvider::class,
         ];
     }
+
+    protected function getEnvironmentSetUp($app): void
+    {
+        $app['config']->set('woocommerce.base_url', 'https://example.com');
+        $app['config']->set('woocommerce.consumer_key', 'ck_fake');
+        $app['config']->set('woocommerce.consumer_secret', 'cs_fake');
+        $app['config']->set('woocommerce.namespace', 'wp-json/wc/v3');
+    }
 }
